@@ -3,15 +3,15 @@ $cantidad = $_POST['cantidad'];
 $subtotal = $cantidad*125;
 $numero_cajas = ceil($cantidad/4);
 $flete = $numero_cajas*50;
-if ($cantidad>1000)
+if ($cantidad>1000){
     $descuento=$subtotal*0.15;
+}
 else
 {
     if($cantidad>100){
         $descuento=$subtotal*0.05;
         }
-    else
-    {
+    else{
         $descuento=0;
     }
 }
@@ -30,6 +30,9 @@ switch($edad)
         break;
     case 48:
         echo "El doble de tu edad";
+        break;
+    default:
+        echo "Opcion por defecto";
         break;
 }
 
